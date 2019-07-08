@@ -132,6 +132,7 @@
                 tstbGeraet.Clear()
                 tstbIP.Clear()
                 tstbMAC.Clear()
+
             End If
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
