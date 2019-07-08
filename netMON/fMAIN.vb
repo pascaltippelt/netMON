@@ -139,4 +139,15 @@
 
 
     End Sub
+
+    Private Sub fMAIN_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        'Dim args() As String = Environment.GetCommandLineArgs()
+        'If args IsNot Nothing AndAlso args.Count > 0 Then
+
+        '    For Each arg In args
+        '        MsgBox(arg)
+        '    Next
+
+        'End If
+    End Sub
 End Class

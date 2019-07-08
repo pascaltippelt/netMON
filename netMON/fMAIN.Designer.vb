@@ -24,7 +24,7 @@ Partial Class fMAIN
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fMAIN))
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Test-Gerät", "AA-BB-CC-DD-EE-FF", "192.168.1.1", "2019-07-04 15:34:22"}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Test-Gerät", "AA-BB-CC-DD-EE-FF", "192.168.1.1", "2019-07-04 15:34:22"}, -1)
         Me.msMAIN = New System.Windows.Forms.MenuStrip()
         Me.DateiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListeImportienToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,8 +53,8 @@ Partial Class fMAIN
         Me.chLastSeen = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.cmsLV = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.GerätEntfernenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GerätWeckenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.msMAIN.SuspendLayout()
         Me.tsUnten.SuspendLayout()
         Me.cmsLV.SuspendLayout()
@@ -79,13 +79,13 @@ Partial Class fMAIN
         'ListeImportienToolStripMenuItem
         '
         Me.ListeImportienToolStripMenuItem.Name = "ListeImportienToolStripMenuItem"
-        Me.ListeImportienToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListeImportienToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.ListeImportienToolStripMenuItem.Text = "Liste importien"
         '
         'ListeExportierenToolStripMenuItem
         '
         Me.ListeExportierenToolStripMenuItem.Name = "ListeExportierenToolStripMenuItem"
-        Me.ListeExportierenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListeExportierenToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.ListeExportierenToolStripMenuItem.Text = "Liste exportieren"
         '
         'MonitoringToolStripMenuItem
@@ -98,26 +98,26 @@ Partial Class fMAIN
         'StartenToolStripMenuItem
         '
         Me.StartenToolStripMenuItem.Name = "StartenToolStripMenuItem"
-        Me.StartenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StartenToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.StartenToolStripMenuItem.Text = "Starten"
         '
         'StoppenToolStripMenuItem
         '
         Me.StoppenToolStripMenuItem.Name = "StoppenToolStripMenuItem"
-        Me.StoppenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StoppenToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.StoppenToolStripMenuItem.Text = "Stoppen"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(163, 6)
         '
         'AktualisierungszeitToolStripMenuItem
         '
         Me.AktualisierungszeitToolStripMenuItem.Enabled = False
         Me.AktualisierungszeitToolStripMenuItem.Name = "AktualisierungszeitToolStripMenuItem"
         Me.AktualisierungszeitToolStripMenuItem.ShowShortcutKeys = False
-        Me.AktualisierungszeitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AktualisierungszeitToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.AktualisierungszeitToolStripMenuItem.Text = "Aktualisierungszeit"
         '
         'ToolStripTextBox1
@@ -129,7 +129,7 @@ Partial Class fMAIN
         'ÜbernehmenToolStripMenuItem
         '
         Me.ÜbernehmenToolStripMenuItem.Name = "ÜbernehmenToolStripMenuItem"
-        Me.ÜbernehmenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ÜbernehmenToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.ÜbernehmenToolStripMenuItem.Text = "Übernehmen"
         '
         'tsUnten
@@ -203,8 +203,8 @@ Partial Class fMAIN
         Me.lvNetMON.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lvNetMON.FullRowSelect = True
         Me.lvNetMON.GridLines = True
-        ListViewItem1.StateImageIndex = 0
-        Me.lvNetMON.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
+        ListViewItem2.StateImageIndex = 0
+        Me.lvNetMON.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
         Me.lvNetMON.Location = New System.Drawing.Point(0, 24)
         Me.lvNetMON.Name = "lvNetMON"
         Me.lvNetMON.Size = New System.Drawing.Size(643, 366)
@@ -244,14 +244,14 @@ Partial Class fMAIN
         Me.GerätEntfernenToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.GerätEntfernenToolStripMenuItem.Text = "Gerät entfernen"
         '
-        'Timer1
-        '
-        '
         'GerätWeckenToolStripMenuItem
         '
         Me.GerätWeckenToolStripMenuItem.Name = "GerätWeckenToolStripMenuItem"
         Me.GerätWeckenToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.GerätWeckenToolStripMenuItem.Text = "Gerät wecken"
+        '
+        'Timer1
+        '
         '
         'fMAIN
         '
