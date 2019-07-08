@@ -129,25 +129,6 @@ Module BackgroundJobs
 
         Next
 
-
-
-
-
-
-
-        'Dim worker As New BackgroundWorker
-
-        'worker.WorkerReportsProgress = False
-        'worker.WorkerSupportsCancellation = False
-
-        'AddHandler worker.DoWork, AddressOf CheckDevices
-
-        'Dim e(1) As Object
-        'e(0) = Form
-        'e(1) = LVItems
-
-        'worker.RunWorkerAsync(e)
-
     End Sub
 
 
@@ -243,6 +224,8 @@ Module Serialisation
 
     End Sub
     Public Sub DeserializeToListView(ByVal filename As String, ByVal LV As ListView)
+
+        LV.Items.Clear()
 
         '  Create a FileStream to access the storage file
         Dim FS As FileStream = File.Open(filename, FileMode.Open)

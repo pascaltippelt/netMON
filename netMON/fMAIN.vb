@@ -75,7 +75,7 @@
     End Sub
 
     Private Sub ListeImportienToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListeImportienToolStripMenuItem.Click
-        lvNetMON.Items.Clear()
+
 
         Dim ofdImport As New OpenFileDialog
 
@@ -84,8 +84,16 @@
         ofdImport.RestoreDirectory = True
 
         If ofdImport.ShowDialog = DialogResult.OK Then
+
+
+
             DeserializeToListView(ofdImport.FileName, lvNetMON)
+
+            My.Settings.ProjectPfad = ofdImport.FileName
+
         End If
+
+
     End Sub
 
     Private Sub ÜbernehmenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÜbernehmenToolStripMenuItem.Click
@@ -142,13 +150,20 @@
     End Sub
 
     Private Sub fMAIN_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+
+        If My.Settings.ProjectPfad IsNot Nothing AndAlso IO.File.Exists(My.Settings.ProjectPfad) Then
+
+            DeserializeToListView(My.Settings.ProjectPfad, lvNetMON)
+
+        End If
+
         'Dim args() As String = Environment.GetCommandLineArgs()
         'If args IsNot Nothing AndAlso args.Count > 0 Then
 
         '    For Each arg In args
         '        MsgBox(arg)
         '    Next
-
         'End If
     End Sub
+
 End Class
