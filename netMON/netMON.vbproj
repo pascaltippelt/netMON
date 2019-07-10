@@ -25,9 +25,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>https://github.com/pascaltippelt/netMON</SupportUrl>
+    <ErrorReportUrl>https://github.com/pascaltippelt/netMON/issues</ErrorReportUrl>
     <ProductName>netMON</ProductName>
     <PublisherName>Pascal Tippelt</PublisherName>
-    <ApplicationRevision>5</ApplicationRevision>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -119,6 +122,7 @@
       <DependentUpon>fMAIN.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListViewColumnSorter.vb" />
     <Compile Include="Modules.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

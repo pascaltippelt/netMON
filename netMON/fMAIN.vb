@@ -157,13 +157,20 @@
 
         End If
 
-        'Dim args() As String = Environment.GetCommandLineArgs()
-        'If args IsNot Nothing AndAlso args.Count > 0 Then
-
-        '    For Each arg In args
-        '        MsgBox(arg)
-        '    Next
-        'End If
     End Sub
 
+    Private Sub lvNetMON_ColumnClick(sender As Object, e As ColumnClickEventArgs) Handles lvNetMON.ColumnClick
+        Dim iSortOrder As SortOrder = CType(lvNetMON.Columns(e.Column).Tag, SortOrder)
+        Dim lvcs As New ListViewColumnSorter
+        If iSortOrder = SortOrder.Ascending Then
+            lvNetMON.Columns(e.Column).Tag = SortOrder.Descending
+            lvcs.SortingOrder = SortOrder.Descending
+        Else
+            lvNetMON.Columns(e.Column).Tag = SortOrder.Ascending
+            lvcs.SortingOrder = SortOrder.Ascending
+        End If
+        lvcs.ColumnIndex = e.Column
+        lvNetMON.ListViewItemSorter = lvcs
+
+    End Sub
 End Class

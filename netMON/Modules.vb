@@ -19,8 +19,14 @@ Module LVIs
             Return False
         End If
 
-        If MAC.Length > 0 AndAlso isValidMAC(MAC) Then
-            tempLVI.SubItems.Add(MAC)
+
+
+        If MAC.Length > 0 Then
+            MAC = MAC.Replace(":", "-")
+            If isValidMAC(MAC) Then
+                tempLVI.SubItems.Add(MAC)
+            End If
+            tempLVI.SubItems.Add("")
         Else
             tempLVI.SubItems.Add("")
             'Return False
@@ -50,8 +56,11 @@ Module LVIs
             Return False
         End If
 
-        If MAC.Length > 0 AndAlso isValidMAC(MAC.ToUpper) Then
-            tempLVI.SubItems(1).Text = (MAC.ToUpper)
+        If MAC.Length > 0 Then
+            MAC = MAC.Replace(":", "-")
+            If isValidMAC(MAC.ToUpper) Then
+                tempLVI.SubItems(1).Text = (MAC.ToUpper)
+            End If
         Else
             tempLVI.SubItems(1).Text = ("")
             'Return False
@@ -69,6 +78,8 @@ Module LVIs
     Public Function isValidMAC(MAC As String) As Boolean
 
         Try
+
+            Debug.WriteLine(MAC)
 
             Dim MAC_MAC As PhysicalAddress = PhysicalAddress.Parse(MAC)
 
